@@ -404,7 +404,7 @@ const BlackEagleApp = {
 
         this.elements.currentYear.textContent =
             new Date().getFullYear();
-    },
+    }
 
 };
 
