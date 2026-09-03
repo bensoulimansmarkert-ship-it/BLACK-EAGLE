@@ -197,7 +197,8 @@ const BlackEagleApp = {
 
             }
         );
-    }
+       
+   }, 
 
 
     /* =====================================================
@@ -247,7 +248,7 @@ const BlackEagleApp = {
                 { once: true }
             );
         }
-    }
+    },
 
 
     /* =====================================================
@@ -300,7 +301,7 @@ const BlackEagleApp = {
             );
 
         }
-    }
+    },
 
 
     /* =====================================================
@@ -337,7 +338,7 @@ const BlackEagleApp = {
             "menu-open",
             this.state.mobileMenuOpen
         );
-    }
+    },
 
 
     closeMobileMenu() {
@@ -372,7 +373,7 @@ const BlackEagleApp = {
         this.elements.body.classList.remove(
             "menu-open"
         );
-    }
+    },
 
 
     /* =====================================================
@@ -388,7 +389,7 @@ const BlackEagleApp = {
             behavior: "smooth"
 
         });
-    }
+    },
 
 
     /* =====================================================
@@ -403,7 +404,7 @@ const BlackEagleApp = {
 
         this.elements.currentYear.textContent =
             new Date().getFullYear();
-    }
+    },
 
 };
 
