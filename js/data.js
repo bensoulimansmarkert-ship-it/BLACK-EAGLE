@@ -53,7 +53,7 @@ const destinationsData = [
         countryEn: "Turkey",
         cityAr: "إسطنبول",
         cityEn: "Istanbul",
-        image: "assets/images/destinations/turkey.jpg",
+        image: "assets/images/destinations/turkey.svg",
         descriptionAr: "اكتشف إسطنبول بين التاريخ العريق والطبيعة الساحرة.",
         descriptionEn: "Discover Istanbul between rich history and beautiful nature.",
         startingPrice: 499,
@@ -70,7 +70,7 @@ const destinationsData = [
         countryEn: "Japan",
         cityAr: "طوكيو",
         cityEn: "Tokyo",
-        image: "assets/images/destinations/japan.jpg",
+        image: "assets/images/destinations/japan.svg",
         descriptionAr: "رحلة مميزة تجمع بين التكنولوجيا والثقافة اليابانية.",
         descriptionEn: "A unique journey combining technology and Japanese culture.",
         startingPrice: 1499,
@@ -87,7 +87,7 @@ const destinationsData = [
         countryEn: "Switzerland",
         cityAr: "زيورخ",
         cityEn: "Zurich",
-        image: "assets/images/destinations/switzerland.jpg",
+        image: "assets/images/destinations/switzerland.svg",
         descriptionAr: "استمتع بالجبال والبحيرات والطبيعة الأوروبية الخلابة.",
         descriptionEn: "Enjoy mountains, lakes and breathtaking European landscapes.",
         startingPrice: 1299,
@@ -104,7 +104,7 @@ const destinationsData = [
         countryEn: "Maldives",
         cityAr: "ماليه",
         cityEn: "Male",
-        image: "assets/images/destinations/maldives.jpg",
+        image: "assets/images/destinations/maldives.svg",
         descriptionAr: "جزر استوائية وشواطئ ساحرة لإجازة لا تنسى.",
         descriptionEn: "Tropical islands and stunning beaches for an unforgettable escape.",
         startingPrice: 1299,
@@ -131,7 +131,7 @@ const offersData = [
         titleEn: "Maldives Escape",
         locationAr: "جزر المالديف",
         locationEn: "Maldives",
-        image: "assets/images/offers/maldives-offer.jpg",
+        image: "assets/images/offers/maldives-offer.svg",
         oldPrice: 1499,
         price: 999,
         discount: 20,
@@ -148,7 +148,7 @@ const offersData = [
         titleEn: "Discover Turkey",
         locationAr: "إسطنبول - تركيا",
         locationEn: "Istanbul - Turkey",
-        image: "assets/images/offers/turkey-offer.jpg",
+        image: "assets/images/offers/turkey-offer.svg",
         oldPrice: 799,
         price: 599,
         discount: 25,
@@ -165,7 +165,7 @@ const offersData = [
         titleEn: "Amazing Switzerland",
         locationAr: "سويسرا",
         locationEn: "Switzerland",
-        image: "assets/images/offers/switzerland-offer.jpg",
+        image: "assets/images/offers/switzerland-offer.svg",
         oldPrice: 1899,
         price: 1599,
         discount: 15,
@@ -338,7 +338,7 @@ const tripsData = [
         descriptionEn:
             "A special family journey to discover the highlights of Istanbul.",
 
-        image: "assets/images/trips/istanbul.jpg",
+        image: "assets/images/trips/istanbul.svg",
 
         durationDays: 6,
         durationNights: 5,
@@ -372,7 +372,7 @@ const tripsData = [
         descriptionEn:
             "A luxurious romantic escape surrounded by the beauty of the Maldives.",
 
-        image: "assets/images/trips/maldives.jpg",
+        image: "assets/images/trips/maldives.svg",
 
         durationDays: 7,
         durationNights: 6,
@@ -406,7 +406,7 @@ const tripsData = [
         descriptionEn:
             "Discover Swiss mountains and lakes in a premium travel experience.",
 
-        image: "assets/images/trips/switzerland.jpg",
+        image: "assets/images/trips/switzerland.svg",
 
         durationDays: 8,
         durationNights: 7,
@@ -440,7 +440,7 @@ const tripsData = [
         descriptionEn:
             "A journey combining modern Tokyo with authentic Japanese culture.",
 
-        image: "assets/images/trips/japan.jpg",
+        image: "assets/images/trips/japan.svg",
 
         durationDays: 9,
         durationNights: 8,
@@ -476,7 +476,7 @@ const hotelsData = [
         nameAr: "فندق إسطنبول الفاخر",
         nameEn: "Istanbul Luxury Hotel",
 
-        image: "assets/images/hotels/istanbul-hotel.jpg",
+        image: "assets/images/hotels/istanbul-hotel.svg",
 
         stars: 5,
 
@@ -505,7 +505,7 @@ const hotelsData = [
         nameAr: "منتجع المالديف الفاخر",
         nameEn: "Maldives Luxury Resort",
 
-        image: "assets/images/hotels/maldives-resort.jpg",
+        image: "assets/images/hotels/maldives-resort.svg",
 
         stars: 5,
 
@@ -534,7 +534,7 @@ const hotelsData = [
         nameAr: "منتجع سويسرا الجبلي",
         nameEn: "Swiss Mountain Resort",
 
-        image: "assets/images/hotels/switzerland-hotel.jpg",
+        image: "assets/images/hotels/switzerland-hotel.svg",
 
         stars: 5,
 

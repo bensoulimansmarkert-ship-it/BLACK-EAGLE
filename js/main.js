@@ -68,13 +68,13 @@ const BlackEagleApp = {
                 document.querySelector(".mobile-menu-btn"),
 
             mobileNav:
-                document.querySelector(".mobile-nav"),
+                document.querySelector(".mobile-navigation"),
 
             backToTop:
                 document.getElementById("backToTop"),
 
             notification:
-                document.getElementById("notification"),
+                document.getElementById("siteNotification"),
 
             notificationMessage:
                 document.getElementById("notificationMessage"),
@@ -83,10 +83,10 @@ const BlackEagleApp = {
                 document.getElementById("galleryLightbox"),
 
             galleryLightboxImage:
-                document.getElementById("galleryLightboxImage"),
+                document.getElementById("lightboxImage"),
 
             galleryClose:
-                document.querySelector(".gallery-close"),
+                document.getElementById("lightboxClose"),
 
             currentYear:
                 document.getElementById("currentYear")
@@ -118,6 +118,13 @@ const BlackEagleApp = {
         }
 
 
+        /* Mobile navigation close button */
+        const mobileNavClose = document.getElementById("mobileNavClose");
+        if (mobileNavClose) {
+            mobileNavClose.addEventListener("click", () => this.closeMobileMenu());
+        }
+
+
         /* Mobile navigation links */
         if (this.elements.mobileNav) {
 
@@ -132,6 +139,13 @@ const BlackEagleApp = {
                 );
 
             });
+        }
+
+
+        /* Notification close */
+        const notificationClose = document.getElementById("notificationClose");
+        if (notificationClose) {
+            notificationClose.addEventListener("click", () => this.elements.notification?.classList.remove("active"));
         }
 
 
@@ -319,9 +333,10 @@ const BlackEagleApp = {
 
 
         this.elements.mobileNav.classList.toggle(
-            "active",
+            "open",
             this.state.mobileMenuOpen
         );
+        this.elements.mobileNav.setAttribute("aria-hidden", String(!this.state.mobileMenuOpen));
 
 
         if (this.elements.mobileMenuButton) {
@@ -330,6 +345,7 @@ const BlackEagleApp = {
                 "active",
                 this.state.mobileMenuOpen
             );
+            this.elements.mobileMenuButton.setAttribute("aria-expanded", String(this.state.mobileMenuOpen));
 
         }
 
@@ -355,8 +371,9 @@ const BlackEagleApp = {
         if (this.elements.mobileNav) {
 
             this.elements.mobileNav.classList.remove(
-                "active"
+                "open"
             );
+            this.elements.mobileNav.setAttribute("aria-hidden", "true");
 
         }
 
@@ -366,6 +383,7 @@ const BlackEagleApp = {
             this.elements.mobileMenuButton.classList.remove(
                 "active"
             );
+            this.elements.mobileMenuButton.setAttribute("aria-expanded", "false");
 
         }
 
@@ -455,7 +473,8 @@ BlackEagleApp.initializeSearch = function () {
                 document.getElementById("searchDestination");
 
             const travelTypeInput =
-                document.getElementById("searchTravelType");
+                document.getElementById("searchTravelType") ||
+                document.getElementById("searchTravelers");
 
             const travelDateInput =
                 document.getElementById("searchDate");
@@ -1242,6 +1261,11 @@ BlackEagleApp.initializeGallery = function () {
         );
     }
 
+    const galleryPrev = document.getElementById("lightboxPrev");
+    const galleryNext = document.getElementById("lightboxNext");
+    if (galleryPrev) galleryPrev.addEventListener("click", () => this.previousGalleryImage());
+    if (galleryNext) galleryNext.addEventListener("click", () => this.nextGalleryImage());
+
 
     /*
      * Close by clicking the background.
@@ -1552,7 +1576,7 @@ BlackEagleApp.initializeTestimonials = function () {
 
     const items =
         slider.querySelectorAll(
-            ".testimonial-item"
+            ".testimonial-card"
         );
 
 
@@ -1601,13 +1625,13 @@ BlackEagleApp.initializeTestimonials = function () {
 
     const nextButton =
         slider.querySelector(
-            ".testimonial-next"
+            ".testimonial-next, #testimonialNext"
         );
 
 
     const previousButton =
         slider.querySelector(
-            ".testimonial-prev"
+            ".testimonial-prev, #testimonialPrev"
         );
 
 
@@ -2566,9 +2590,8 @@ BlackEagleApp.restoreLastSearch = function () {
 
 
     const travelType =
-        document.getElementById(
-            "searchTravelType"
-        );
+        document.getElementById("searchTravelType") ||
+        document.getElementById("searchTravelers");
 
 
     const travelDate =
@@ -2842,6 +2865,14 @@ BlackEagleApp.init = function () {
     this.renderFeaturedDestinations();
 
     this.renderFeaturedOffers();
+
+    this.initializeSearch();
+
+    this.initializeBookingForm();
+
+    this.initializeGallery();
+
+    this.initializeTestimonials();
 
     this.updateStatistics();
 
